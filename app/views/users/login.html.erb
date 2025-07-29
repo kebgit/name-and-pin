@@ -1,0 +1,14 @@
+<h1>Enter Your PIN</h1>
+
+<%= form_with url: authenticate_path, method: :post, local: true do |f| %>
+  <%= label_tag :name, "Name" %><br>
+  <%= text_field_tag :name %><br><br>
+  
+  <%= label_tag :pin, "PIN" %><br>
+  <%= text_field_tag :pin %><br><br>
+  <%= submit_tag "Log In" %>
+<% end %>
+
+<% if flash[:alert] %>
+  <p style="color: red;"><%= flash[:alert] %></p>
+<% end %>

@@ -1,0 +1,7 @@
+<h1>Enter Your Name</h1>
+
+<%= form_with model: @user, local: true do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br><br>
+  <%= f.submit "Get My PIN" %>
+<% end %>

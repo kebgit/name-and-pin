@@ -1,0 +1,8 @@
+<h1>Welcome, <%= @user.name %>!</h1>
+
+<p>Your login PIN is:</p>
+<h2><%= @user.pin %></h2>
+
+<p>Screenshot this! You'll need it to log back in.</p>
+
+<%= link_to "Log In Again", login_path %>
